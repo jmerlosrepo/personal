@@ -1,0 +1,39 @@
+body {
+  background-color: #f0f0f0;
+}
+
+.introTitle {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #343a40;
+  color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+}
+
+.container-margins {
+  margin: 20px auto;
+}
+
+.picture {
+  width: 400px;
+  height: 400px;
+  display: block;
+  position: relative;
+  margin: 0px auto;
+  border-radius: 200px;
+  background-image: url("http://localhost:3000/assets/profile.png");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: center;
+}
+
+.techList {
+  list-style-type: none;
+}
+
+.techList li {
+  width: 32px;
+  height: 32px;
+  margin: 0 5px;
+  display: inline;
+}
