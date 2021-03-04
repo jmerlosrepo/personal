@@ -1,0 +1,36 @@
+{
+    "personal": {
+        "introName":"Jesus Merlos",
+        "career": "software developer",
+        "presentation":"<p>13 years of programming experience in web development using HTML 5, ASP.Net, CSS, Bootstrap, JavaScript, Jquery, SqlServer and Oracle 11g databases.</p><p>Front-End developer with 5 years of experience in developing UI for web application with Angularjs, Vuejs and Reactjs.</p><p>Experience designing web applications with HTML 5, SASS, CSS, Bootstrap, Ajax, JSON and Jquery.</p>",
+        "profilePic":"profile.png",
+        "resumeJobs":[
+            {
+                "title": "Tester",
+                "from": "Jan-2020",
+                "to": "Jan-2021",
+                "description": "Test things",
+                "tasks": [
+                    {
+                        "description": "Help users"
+                    }
+                ], 
+                "technologies": [
+                    {
+                        "image": "csharp",
+                        "name":"C#"},
+                    {
+                        "image": "mysql",
+                        "name":"MySQL"
+                    }
+                ]
+            }
+        ],
+        "portfolio": [],
+        "contactInfo": {
+            "phone":"206-406-6747",
+            "email":"contact@jmerlos.com",
+            "linkedin":"https://www.linkedin.com/in/jesusmerlos"
+        }
+    }
+}
