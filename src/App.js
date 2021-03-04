@@ -23,6 +23,7 @@ class App extends Component {
     .then(res => res.json())
     .then(data => {
       const {introName, career, presentation, profilePic, resumeJobs, portfolio, contactInfo} = data.personal;
+      console.log(portfolio);
       this.setState({introName, career, presentation, profilePic, resumeJobs, portfolio, contactInfo});
     });
   }
@@ -41,9 +42,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={() => <Intro introName={introName} career={career} presentation={presentation} profilePic={profilePic}/>}/>
           <Route path="/resume" component={() => <Resume jobs={resumeJobs} />} />
-          <Route path="/portfolio">
-            <Portfolio />
-          </Route>
+          <Route path="/portfolio" component={() => <Portfolio portfolios={portfolio} />} />
           <Route path="/contact">
             <Contact />
           </Route>
