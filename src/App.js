@@ -5,57 +5,42 @@ import Intro from './components/intro';
 import Portfolio from './components/portfolio';
 import Resume from './components/resume';
 import Contact from './components/contact';
+import * as personalConstants from './constants';
 import './App.css';
 
 class App extends Component {
   state = {
-    jobs: [],
+    introName: "",
+    career: "",
+    presentation: "",
+    profilePic: "",
+    resumeJobs: [],
     portfolio: []
   }
   
   componentDidMount = () => {
-    const jobs = [
-      {title: "Tester",
-      from: "Jan-2020",
-      to: "Jan-2021",
-      description: "Test things",
-      tasks: [
-        {description: "Help users"}
-      ], 
-      technologies: [
-        {image: "csharp",
-        name:"C#"},
-        {image: "mysql",
-        name:"MySQL"}
-      ]},
-      {title: "Developer",
-      from: "Jan-2019",
-      to: "Jan-2020",
-      description: "Building Apps",
-      tasks: [
-        {description: "Write code in JavaScript"}
-      ], 
-      technologies: [
-        {image: "javascript",
-        name:"JavaScript"}
-      ]}
-    ];
-
-    const portfolio = [];
-
-    this.setState({jobs, portfolio});
+    fetch(`${personalConstants.HOST}:${personalConstants.PORT}${personalConstants.DATA_FILE}`)
+    .then(res => res.json())
+    .then(data => {
+      const {introName, career, presentation, profilePic, resumeJobs, portfolio, contactInfo} = data.personal;
+      this.setState({introName, career, presentation, profilePic, resumeJobs, portfolio, contactInfo});
+    });
   }
 
   render(){
-
+    const {
+    introName,
+    career,
+    presentation,
+    profilePic,
+    resumeJobs,
+    portfolio} = this.state; 
     return (
       <div>
         <Nav />
         <Switch>
-          <Route exact path="/">
-            <Intro/>
-          </Route>
-          <Route path="/resume" component={() => <Resume jobs={this.state.jobs} />} />
+          <Route exact path="/" component={() => <Intro introName={introName} career={career} presentation={presentation} profilePic={profilePic}/>}/>
+          <Route path="/resume" component={() => <Resume jobs={resumeJobs} />} />
           <Route path="/portfolio">
             <Portfolio />
           </Route>
