@@ -21,7 +21,6 @@ body {
   position: relative;
   margin: 0px auto;
   border-radius: 200px;
-  background-image: url("http://localhost:3000/assets/profile.png");
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: center;
