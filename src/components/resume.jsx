@@ -12,6 +12,7 @@ const Resume = ({ jobs }) => {
       {jobs
         ? jobs.map((job) => (
             <ResumeListElement
+              key={job.id}
               jobTitle={job.title}
               from={job.from}
               to={job.to}
