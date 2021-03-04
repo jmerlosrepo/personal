@@ -6,6 +6,7 @@
         "profilePic":"profile.png",
         "resumeJobs":[
             {
+                "id":"1",
                 "title": "Tester",
                 "from": "Jan-2020",
                 "to": "Jan-2021",
@@ -26,7 +27,26 @@
                 ]
             }
         ],
-        "portfolio": [],
+        "portfolio": [
+            {
+                "id":"1",
+                "name":"Personal Page",
+                "description": "Personal page for me.",
+                "githubLink": "https://github.com/jmerlosrepo/personal"
+            },
+            {
+                "id":"2",
+                "name":"Jewels Cataloge",
+                "description": "Jewels cataloge for selling jewels models on demand.",
+                "githubLink": "https://github.com/jmerlosrepo/jewels"
+            },
+            {
+                "id":"3",
+                "name":"Jewels BackEnd",
+                "description": "Jewels cataloge BE for selling jewels models on demand.",
+                "githubLink": "https://github.com/jmerlosrepo/jewelsbe"
+            }
+        ],
         "contactInfo": {
             "phone":"206-406-6747",
             "email":"contact@jmerlos.com",
