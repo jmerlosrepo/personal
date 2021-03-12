@@ -29,6 +29,11 @@ class App extends Component {
     });
   }
 
+  handleSend = (e, contactMessage) => {
+    e.preventDefault();
+    console.log(contactMessage);
+  }
+
   render(){
     const {
     introName,
@@ -45,7 +50,7 @@ class App extends Component {
           <Route exact path="/" component={() => <Intro introName={introName} career={career} presentation={presentation} profilePic={profilePic}/>}/>
           <Route path="/resume" component={() => <Resume jobs={resumeJobs} />} />
           <Route path="/portfolio" component={() => <Portfolio portfolios={portfolio} />} />
-          <Route path="/contact" component={() => <Contact info={contactInfo} />} />
+          <Route path="/contact" component={() => <Contact info={contactInfo} onSend={this.handleSend} />} />
         </Switch>
       </div>
     );
