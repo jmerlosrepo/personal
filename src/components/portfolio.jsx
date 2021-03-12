@@ -4,7 +4,7 @@ import PortfolioListElement from './portfolioListElement';
 const Portfolio = ({portfolios}) => {
   return (
     <div className="container container-margins">
-      <table className="table table-striped">
+      <table className="table table-sm table-striped">
         <thead className="thead-light">
           <tr>
             <th scope="col">Project</th>
