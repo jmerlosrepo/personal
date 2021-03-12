@@ -15,7 +15,8 @@ class App extends Component {
     presentation: "",
     profilePic: "",
     resumeJobs: [],
-    portfolio: []
+    portfolio: [],
+    contactInfo: {}
   }
   
   componentDidMount = () => {
@@ -35,7 +36,8 @@ class App extends Component {
     presentation,
     profilePic,
     resumeJobs,
-    portfolio} = this.state; 
+    portfolio, 
+    contactInfo} = this.state; 
     return (
       <div>
         <Nav />
@@ -43,9 +45,7 @@ class App extends Component {
           <Route exact path="/" component={() => <Intro introName={introName} career={career} presentation={presentation} profilePic={profilePic}/>}/>
           <Route path="/resume" component={() => <Resume jobs={resumeJobs} />} />
           <Route path="/portfolio" component={() => <Portfolio portfolios={portfolio} />} />
-          <Route path="/contact">
-            <Contact />
-          </Route>
+          <Route path="/contact" component={() => <Contact info={contactInfo} />} />
         </Switch>
       </div>
     );
