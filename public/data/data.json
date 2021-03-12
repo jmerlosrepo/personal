@@ -48,6 +48,7 @@
             }
         ],
         "contactInfo": {
+            "disclaimer":"<p>If you’d like to get in touch with me, whether to hire me, request additional contact information, or just to say hi, you can contact me using the form below or my e-mail address.</p>",
             "phone":"206-406-6747",
             "email":"contact@jmerlos.com",
             "linkedin":"https://www.linkedin.com/in/jesusmerlos"
