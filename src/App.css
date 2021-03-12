@@ -1,5 +1,14 @@
 body {
-  background-color: #f0f0f0;
+  background-color: #f5f5f0;
+}
+
+.intro {
+  display: flex;
+  flex-direction: row;
+}
+
+.introPic, .IntroBio{
+  padding: 10px;
 }
 
 .introTitle {
@@ -35,4 +44,69 @@ body {
   height: 32px;
   margin: 0 5px;
   display: inline;
+}
+
+label{
+  display: block;
+}
+
+textarea{
+  resize: none;
+}
+
+.formContainer{
+  margin-top: 0px;
+  border: 1px solid #343a40;
+  padding: 10px;
+  border-radius: 0px 0px 10px 10px;
+  background-color: #c0c2c4;
+  margin-bottom: 30px;
+}
+
+form h3{
+  background-color: #343a40;
+  padding: 10px;
+  color: #fff;
+  border-radius: 10px 10px 0px 0px;
+  margin-bottom: 0px;
+}
+
+#myTopnav .icon {
+  display: none;
+  color: #f2f2f2;
+  font-size: 24px;
+}
+
+@media screen and (max-width:1000px) {
+  #myTopnav li {display: none;}
+  #myTopnav li.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1000px) {
+  #myTopnav.responsive {position: relative;}
+  #myTopnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 15px;
+  }
+  #myTopnav.responsive li {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .btn-secondary {
+    width: 100%;
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+  }
+
 }
