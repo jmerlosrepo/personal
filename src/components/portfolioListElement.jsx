@@ -6,7 +6,7 @@ const PortfolioListElement = ({porfolioElement}) => {
         <tr>
             <td>{name}</td>
             <td>{description}</td>
-            <td><a href={githubLink}>{githubLink}</a></td>
+            <td><a target="_blank" href={githubLink}>{githubLink}</a></td>
         </tr>
     )
 }
