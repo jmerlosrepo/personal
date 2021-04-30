@@ -20,7 +20,13 @@ class App extends Component {
   }
   
   componentDidMount = () => {
-    fetch(`${personalConstants.HOST}:${personalConstants.PORT}${personalConstants.DATA_FILE}`)
+    fetch(`${personalConstants.HOST}:${personalConstants.PORT}${personalConstants.DATA_FILE}`, {
+      method: 'GET',
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*"
+      }
+    })
     .then(res => res.json())
     .then(data => {
       const {introName, career, presentation, profilePic, resumeJobs, portfolio, contactInfo} = data.personal;
